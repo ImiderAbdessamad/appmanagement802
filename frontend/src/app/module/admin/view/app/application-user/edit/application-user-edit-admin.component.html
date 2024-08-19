@@ -1,0 +1,69 @@
+    <p-dialog [(visible)]="editDialog" [style]="{width: '70vw'}" header="{{'applicationUser.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+        <ng-template pTemplate="content" >
+                <p-tabView>
+                    <p-tabPanel header="{{'applicationUser.tabPan' | translate}}">
+                        <div class="grid">
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="1">{{'applicationUser.firstName' | translate}}</label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'applicationUser.firstName' | translate}}" id="1" [(ngModel)]="item.firstName"
+                                                    />
+                                            
+                                        </div>
+
+
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="2">{{'applicationUser.lastName' | translate}}</label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'applicationUser.lastName' | translate}}" id="2" [(ngModel)]="item.lastName"
+                                                    />
+                                            
+                                        </div>
+
+
+
+                                        <div class="field col-12 md:col-6">
+                                            <label for="3">{{'applicationUser.email' | translate}}</label>
+                                            <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'applicationUser.email' | translate}}" id="3" [(ngModel)]="item.email"
+                                                    />
+                                            
+                                        </div>
+
+
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="4">{{'applicationUser.application' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="applications" [(ngModel)]="item.application" id="4" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="id" placeholder="{{'applicationUser.application' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                                    <div class="field col-11 md:col-6">
+                                        <label for="5">{{'applicationUser.applicationUserState' | translate}}</label>
+                                        <p-dropdown  appendTo="body"  [options]="applicationUserStates" [(ngModel)]="item.applicationUserState" id="5" [filter]="true" filterMatchMode="contains"
+                                                     [showClear]="true" optionLabel="libelle" placeholder="{{'applicationUser.applicationUserState' | translate}}"  >
+                                        </p-dropdown>
+                                        
+                                    </div>
+
+                        </div>
+                    </p-tabPanel>
+
+                </p-tabView>
+
+        </ng-template>
+
+        <ng-template pTemplate="footer" >
+            <div class="p-flexbox">
+
+                    <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="edit()"></button>
+
+
+                        <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideEditDialog()"></button>
+
+
+            </div>
+        </ng-template>
+
+    </p-dialog>

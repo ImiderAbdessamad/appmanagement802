@@ -1,0 +1,184 @@
+{
+    "from-to": "العناصر من {first} إلى {last} (الإجمالي {totalRecords})",
+    "new": "جديد",
+    "search": "بحث",
+    "export": "تصدير",
+    "validate": "التحقق",
+    "search": "البحث...",
+    "delete": "حذف",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "next": "التالي",
+    "yes": "نعم",
+    "no": "لا",
+    "actions": "الإجراءات",
+    "confirm": "تأكيد",
+    "creation": "إنشاء",
+    "list": "قائمة",
+
+    "actionPermission": {
+        "reference": "المرجع",
+        "libelle": "التسمية",
+        "actionPermission": "إذن الإجراء",
+        "tabPan": "إذن الإجراء",
+        "header": "قائمة أذونات الإجراءات",
+        "deleteActionPermissionConfirmationMessage": "هل أنت متأكد أنك تريد حذف إذن الإجراء؟",
+        "deleteActionPermissionsConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "modelPermissionUser": {
+        "actionPermission": "إذن الإجراء",
+        "actionPermissionPlaceHolder": "اختر إذن الإجراء",
+        "actionPermissionPlaceHolderFilter": "البحث حسب إذن الإجراء",
+        "modelPermission": "إذن النموذج",
+        "modelPermissionPlaceHolder": "اختر إذن النموذج",
+        "modelPermissionPlaceHolderFilter": "البحث حسب إذن النموذج",
+        "value": "القيمة",
+        "user": "المستخدم",
+        "userPlaceHolder": "اختر مستخدمًا",
+        "userPlaceHolderFilter": "البحث حسب المستخدم",
+        "subAttribute": "السمة الفرعية",
+        "modelPermissionUser": "إذن مستخدم النموذج",
+        "tabPan": "إذن مستخدم النموذج",
+        "header": "قائمة مستخدمي إذن النموذج",
+        "deleteModelPermissionUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف مستخدم إذن النموذج؟",
+        "deleteModelPermissionUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "role": {
+        "authority": "السلطة",
+        "role": "الدور",
+        "tabPan": "الدور",
+        "header": "قائمة الأدوار",
+        "deleteRoleConfirmationMessage": "هل أنت متأكد أنك تريد حذف الدور؟",
+        "deleteRolesConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "roleUser": {
+        "role": "الدور",
+        "rolePlaceHolder": "اختر دورًا",
+        "rolePlaceHolderFilter": "البحث حسب الدور",
+        "user": "المستخدم",
+        "userPlaceHolder": "اختر مستخدمًا",
+        "userPlaceHolderFilter": "البحث حسب المستخدم",
+        "roleUser": "دور المستخدم",
+        "tabPan": "دور المستخدم",
+        "header": "قائمة مستخدمي الدور",
+        "deleteRoleUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف مستخدم الدور؟",
+        "deleteRoleUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "user": {
+        "credentialsNonExpired": "صلاحية الاعتماد غير منتهية",
+        "enabled": "مفعل",
+        "email": "البريد الإلكتروني",
+        "accountNonExpired": "الحساب غير منتهي",
+        "accountNonLocked": "الحساب غير مقفل",
+        "username": "اسم المستخدم",
+        "password": "كلمة المرور",
+        "passwordChanged": "تم تغيير كلمة المرور",
+        "modelPermissionUsers": "مستخدمو إذن النموذج",
+        "roleUsers": "مستخدمو الدور",
+        "RoleUsersPlaceHolder": "حدد عدة أدوار",
+        "user": "المستخدم",
+        "tabPan": "المستخدم",
+        "header": "قائمة المستخدمين",
+        "deleteUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف المستخدم؟",
+        "deleteUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+	"modelPermission": {
+		"reference": "المرجع",
+		"libelle": "التسمية",
+		"modelPermission": "إذن النموذج",
+		"tabPan": "إذن النموذج",
+		"header": "قائمة أذونات النماذج",
+		"deleteModelPermissionConfirmationMessage": "هل أنت متأكد أنك تريد حذف إذن النموذج؟",
+		"deleteModelPermissionsConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+	}
+
+
+
+    "app":{
+        "name": "Name",
+        "description": "Description",
+        "appState": "App state",
+        "appStatePlaceHolder": "Select a App state",
+        "appStatePlaceHolderFilter": "Search by App state",
+        "appOwner": "App owner",
+        "appOwnerPlaceHolder": "Select a App owner",
+        "appOwnerPlaceHolderFilter": "Search by App owner",
+        "applicationUser": "Application user",
+        "app": "App",
+        "tabPan": "App",
+        "header": "Liste des apps",
+        "deleteAppConfirmationMessage": "Are you sure you want to delete app",
+        "deleteAppsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "applicationUser":{
+        "firstName": "First name",
+        "lastName": "Last name",
+        "email": "Email",
+        "application": "Application",
+        "applicationPlaceHolder": "Select a Application",
+        "applicationPlaceHolderFilter": "Search by Application",
+        "applicationUserState": "Application user state",
+        "applicationUserStatePlaceHolder": "Select a Application user state",
+        "applicationUserStatePlaceHolderFilter": "Search by Application user state",
+        "applicationUser": "Application user",
+        "tabPan": "Application user",
+        "header": "Liste des application users",
+        "deleteApplicationUserConfirmationMessage": "Are you sure you want to delete application user",
+        "deleteApplicationUsersConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "appState":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "style": "Style",
+        "appState": "App state",
+        "tabPan": "App state",
+        "header": "Liste des app states",
+        "deleteAppStateConfirmationMessage": "Are you sure you want to delete app state",
+        "deleteAppStatesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "appOwner":{
+        "description": "Description",
+        "credentialsNonExpired": "Credentials non expired",
+        "enabled": "Enabled",
+        "accountNonExpired": "Account non expired",
+        "accountNonLocked": "Account non locked",
+        "passwordChanged": "Password changed",
+        "username": "Username",
+        "password": "Password",
+        "avatar": "Avatar",
+        "fullName": "Full name",
+        "about": "About",
+        "appOwner": "App owner",
+        "tabPan": "App owner",
+        "header": "Liste des app owners",
+        "deleteAppOwnerConfirmationMessage": "Are you sure you want to delete app owner",
+        "deleteAppOwnersConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "applicationUserState":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "style": "Style",
+        "applicationUserState": "Application user state",
+        "tabPan": "Application user state",
+        "header": "Liste des application user states",
+        "deleteApplicationUserStateConfirmationMessage": "Are you sure you want to delete application user state",
+        "deleteApplicationUserStatesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+"appName": "GED"
+}
+
+

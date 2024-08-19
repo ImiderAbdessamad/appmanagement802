@@ -1,0 +1,440 @@
+openapi: 3.0.3
+info:
+  title: Title
+  description: Title
+  version: 1.0.0
+servers:
+  - url: 'https'
+paths:
+  /apps:
+    get:
+      summary: List all apps
+      operationId: listApps
+      tags:
+        - apps
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of apps
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/Apps'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a app
+      operationId: createApps
+      tags:
+        - apps
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /apps/{appId}:
+    get:
+      summary: Info for a specific app
+      operationId: showAppById
+      tags:
+        - apps
+      parameters:
+        - name: appId
+          in: path
+          required: true
+          description: The id of the app to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/Apps'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /applicationUsers:
+    get:
+      summary: List all applicationUsers
+      operationId: listApplicationUsers
+      tags:
+        - applicationUsers
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of applicationUsers
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/ApplicationUsers'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a applicationUser
+      operationId: createApplicationUsers
+      tags:
+        - applicationUsers
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /applicationUsers/{applicationUserId}:
+    get:
+      summary: Info for a specific applicationUser
+      operationId: showApplicationUserById
+      tags:
+        - applicationUsers
+      parameters:
+        - name: applicationUserId
+          in: path
+          required: true
+          description: The id of the applicationUser to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/ApplicationUsers'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /appStates:
+    get:
+      summary: List all appStates
+      operationId: listAppStates
+      tags:
+        - appStates
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of appStates
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/AppStates'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a appState
+      operationId: createAppStates
+      tags:
+        - appStates
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /appStates/{appStateId}:
+    get:
+      summary: Info for a specific appState
+      operationId: showAppStateById
+      tags:
+        - appStates
+      parameters:
+        - name: appStateId
+          in: path
+          required: true
+          description: The id of the appState to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/AppStates'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /appOwners:
+    get:
+      summary: List all appOwners
+      operationId: listAppOwners
+      tags:
+        - appOwners
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of appOwners
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/AppOwners'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a appOwner
+      operationId: createAppOwners
+      tags:
+        - appOwners
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /appOwners/{appOwnerId}:
+    get:
+      summary: Info for a specific appOwner
+      operationId: showAppOwnerById
+      tags:
+        - appOwners
+      parameters:
+        - name: appOwnerId
+          in: path
+          required: true
+          description: The id of the appOwner to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/AppOwners'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /applicationUserStates:
+    get:
+      summary: List all applicationUserStates
+      operationId: listApplicationUserStates
+      tags:
+        - applicationUserStates
+      parameters:
+        - name: limit
+          in: query
+          description: How many items to return at one time (max 100)
+          required: false
+          type: integer
+          format: int32
+      responses:
+        "200":
+          description: A paged array of applicationUserStates
+          headers:
+            x-next:
+              type: string
+              description: A link to the next page of responses
+          schema:
+            $ref: '#/definitions/ApplicationUserStates'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+    post:
+      summary: Create a applicationUserState
+      operationId: createApplicationUserStates
+      tags:
+        - applicationUserStates
+      responses:
+        "201":
+          description: Null response
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  /applicationUserStates/{applicationUserStateId}:
+    get:
+      summary: Info for a specific applicationUserState
+      operationId: showApplicationUserStateById
+      tags:
+        - applicationUserStates
+      parameters:
+        - name: applicationUserStateId
+          in: path
+          required: true
+          description: The id of the applicationUserState to retrieve
+          type: string
+      responses:
+        "200":
+          description: Expected response to a valid request
+          schema:
+            $ref: '#/definitions/ApplicationUserStates'
+        default:
+          description: unexpected error
+          schema:
+            $ref: '#/definitions/Error'
+  
+
+
+definitions:
+  App:
+    type: "object"
+    required:
+      - id
+      - name
+      - description
+    properties:
+      id:
+        type: int
+      name:
+        type: string
+      description:
+        type: string
+  Apps:
+    type: array
+    items:
+      $ref: '#/definitions/App'
+  ApplicationUser:
+    type: "object"
+    required:
+      - id
+      - firstName
+      - lastName
+      - email
+    properties:
+      id:
+        type: int
+      firstName:
+        type: string
+      lastName:
+        type: string
+      email:
+        type: string
+  ApplicationUsers:
+    type: array
+    items:
+      $ref: '#/definitions/ApplicationUser'
+  AppState:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+      - style
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+      style:
+        type: string
+  AppStates:
+    type: array
+    items:
+      $ref: '#/definitions/AppState'
+  AppOwner:
+    type: "object"
+    required:
+      - id
+      - description
+      - credentialsNonExpired
+      - enabled
+      - accountNonExpired
+      - accountNonLocked
+      - passwordChanged
+      - username
+      - password
+      - avatar
+      - fullName
+      - about
+    properties:
+      id:
+        type: int
+      description:
+        type: string
+      credentialsNonExpired:
+        type: boolean
+      enabled:
+        type: boolean
+      accountNonExpired:
+        type: boolean
+      accountNonLocked:
+        type: boolean
+      passwordChanged:
+        type: boolean
+      username:
+        type: string
+      password:
+        type: string
+      avatar:
+        type: string
+      fullName:
+        type: string
+      about:
+        type: string
+  AppOwners:
+    type: array
+    items:
+      $ref: '#/definitions/AppOwner'
+  ApplicationUserState:
+    type: "object"
+    required:
+      - id
+      - code
+      - libelle
+      - style
+    properties:
+      id:
+        type: int
+      code:
+        type: string
+      libelle:
+        type: string
+      style:
+        type: string
+  ApplicationUserStates:
+    type: array
+    items:
+      $ref: '#/definitions/ApplicationUserState'
+
+  Error:
+    type: "object"
+    required:
+      - code
+      - message
+    properties:
+      code:
+        type: integer
+        format: int32
+      message:
+        type: string

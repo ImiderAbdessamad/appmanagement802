@@ -1,0 +1,12 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.0.xsd">
+
+            <include file="classpath:db/migration/changelog/app/App.xml"/>
+        <include file="classpath:db/migration/changelog/app/ApplicationUser.xml"/>
+        <include file="classpath:db/migration/changelog/app/AppState.xml"/>
+        <include file="classpath:db/migration/changelog/app/AppOwner.xml"/>
+        <include file="classpath:db/migration/changelog/app/ApplicationUserState.xml"/>
+
+</databaseChangeLog>

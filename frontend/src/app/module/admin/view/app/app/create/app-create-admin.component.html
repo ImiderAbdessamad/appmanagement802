@@ -1,0 +1,123 @@
+        <p-dialog [(visible)]="createDialog" [style]="{width: '70vw'}" header="{{'app.tabPan' | translate}}" [modal]="true" styleClass="p-fluid" [maximizable]="true" [draggable]="false" [resizable]="false">
+            <ng-template pTemplate="content" >
+                        <p-tabView>
+                            <p-tabPanel header="{{'app.tabPan' | translate}}">
+                                <div class="grid">
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="1">{{'app.name' | translate}}</label>
+                                                    <input class="mb-2 mr-2" type="text" pInputText  placeholder="{{'app.name' | translate}}" id="1" [(ngModel)]="item.name"
+                                                             />
+                                                    
+                                                </div>
+
+
+                                                <div class="field col-12 md:col-6">
+                                                    <label for="2">{{'app.description' | translate}}</label>
+                                                    <textarea id="2" pInputTextarea rows="5" cols="30" placeholder="{{'app.description' | translate}}"  [(ngModel)]="item.description"
+                                                             ></textarea>
+                                                    
+                                                </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="3">{{'app.appState' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="appStates" [(ngModel)]="item.appState" id="3" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="libelle" placeholder="{{'app.appState' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                            <div class="field col-11 md:col-6">
+                                                <label for="4">{{'app.appOwner' | translate}}</label>
+                                                <p-dropdown  appendTo="body"  [options]="appOwners" [(ngModel)]="item.appOwner" id="4" [filter]="true" filterMatchMode="contains"
+                                                        [showClear]="true" optionLabel="id" placeholder="{{'app.appOwner' | translate}}"  >
+                                                </p-dropdown>
+                                                
+                                            </div>
+
+                                </div>
+                            </p-tabPanel>
+                                    <p-tabPanel header="{{'app.applicationUser' | translate}}">
+                                                <div class="p-col">
+                                                    <div class="grid">
+                                                                    <div class="field col-12 md:col-6">
+                                                                        <label for="1">First name</label>
+                                                                        <input class="mb-2 mr-2" type="text" pInputText placeholder="First name"
+                                                                               id="1" [(ngModel)]="applicationUserElement.firstName" autofocus   >
+                                                                        
+                                                                    </div>
+                                                                    <div class="field col-12 md:col-6">
+                                                                        <label for="2">Last name</label>
+                                                                        <input class="mb-2 mr-2" type="text" pInputText placeholder="Last name"
+                                                                               id="2" [(ngModel)]="applicationUserElement.lastName" autofocus   >
+                                                                        
+                                                                    </div>
+                                                                    <div class="field col-12 md:col-6">
+                                                                        <label for="3">Email</label>
+                                                                        <input class="mb-2 mr-2" type="text" pInputText placeholder="Email"
+                                                                               id="3" [(ngModel)]="applicationUserElement.email" autofocus   >
+                                                                        
+                                                                    </div>
+                                                                    <div class="field col-11 md:col-6">
+                                                                        <label>Application user state</label>
+                                                                        <p-dropdown  appendTo="body"  [options]="applicationUserStates" [(ngModel)]="applicationUserElement.applicationUserState"
+                                                                                     id="5"  [filter]="true" filterMatchMode="contains" [showClear]="true" optionLabel="libelle"
+                                                                                     placeholder="Application user state"  >
+                                                                        </p-dropdown>
+                                                                        
+                                                                    </div>
+
+                                                        <div class="field col-12 md:col-1">
+                                                            <button pButton pRipple type="button" icon="pi pi-plus" class="mt-4" label="OK" (click)="addApplicationUser()"></button>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="p-col">
+                                                    <div class="card">
+                                                        <p-table [value]="item.applicationUser" [scrollable]="true" scrollHeight="200px">
+                                                            <ng-template pTemplate="header">
+                                                                <tr>
+                                                                                <th>First name</th>
+                                                                                <th>Last name</th>
+                                                                                <th>Email</th>
+                                                                                <th>Application user state</th>
+                                                                    <th>Actions</th>
+                                                                </tr>
+                                                            </ng-template>
+                                                            <ng-template pTemplate="body" let-p>
+                                                                <tr>
+                                                                                <td>{{p.firstName}}</td>
+                                                                                <td>{{p.lastName}}</td>
+                                                                                <td>{{p.email}}</td>
+                                                                            <td>{{p.applicationUserState?.libelle}}</td>
+                                                                    <td>
+                                                                        <button (click)="deleteApplicationUser(p)" pButton type="button" icon="pi pi-times"  class="p-button-rounded p-button-danger"></button>
+                                                                        <button (click)="editApplicationUser(p)" pButton type="button" icon="pi pi-pencil" class="p-button-rounded p-button-success mr-2"></button>
+                                                                    </td>
+                                                                </tr>
+                                                            </ng-template>
+                                                        </p-table>
+                                                    </div>
+
+                                                </div>
+                                    </p-tabPanel>
+
+
+                        </p-tabView>
+
+            </ng-template>
+
+            <ng-template pTemplate="footer" >
+                <div class="p-flexbox">
+
+                            <button pButton pRipple  label="{{'validate' | translate}}"  icon="pi pi-check"  (click)="save()"></button>
+
+
+                            <button pButton pRipple  label="{{'cancel' | translate}}" icon="pi pi-times" class="p-button-outlined" (click)="hideCreateDialog()"></button>
+
+
+                </div>
+            </ng-template>
+
+    </p-dialog>
